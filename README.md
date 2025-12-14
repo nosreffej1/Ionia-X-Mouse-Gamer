@@ -1,4 +1,4 @@
-# IONIA GEAR X — Product Landing Page
+# IONIA GEAR X — Lançamento de Mouse Gamer
 
 Landing page fictícia de lançamento de um mouse gamer premium, desenvolvida para fins de **portfólio**.
 
