@@ -1,0 +1,143 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  background: radial-gradient(circle at top, #0f172a, var(--bg-main));
+  color: var(--text-main);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.section-dark {
+  background: linear-gradient(to bottom, var(--bg-dark), var(--bg-main));
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
+  font-weight: 750;
+  text-align: center;
+  margin-bottom: 0.9rem;
+  letter-spacing: -0.02em;
+}
+
+.section-lead {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+  background: rgba(5, 8, 15, 0.68);
+  border-bottom: 1px solid var(--border);
+  transition: transform var(--transition-medium), background var(--transition-medium);
+}
+
+.header.is-scrolled {
+  background: rgba(5, 8, 15, 0.84);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.logo {
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: var(--green-primary);
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  font-size: 0.92rem;
+}
+
+.nav a:hover {
+  color: var(--text-main);
+}
+
+.footer {
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.fx {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fx-mouse-glow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(900px 500px at var(--mouse-x) var(--mouse-y),
+      rgba(34, 197, 94, 0.18),
+      transparent 60%);
+  filter: blur(12px);
+  opacity: 0.9;
+  transition: opacity var(--transition-medium);
+}
+
+.fx-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.15'/%3E%3C/svg%3E");
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+}
+
+.fx-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.08;
+  mask-image: radial-gradient(circle at 30% 20%, black 0%, transparent 62%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%),
+      rgba(34, 197, 94, 0.06),
+      transparent 35%);
+  transition: background 0.2s ease;
+  z-index: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green-primary);
+  outline-offset: 3px;
+}

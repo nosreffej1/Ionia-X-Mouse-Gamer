@@ -1,0 +1,124 @@
+@media (max-width: 980px) {
+    .nav {
+        display: none;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero {
+        padding: 5.2rem 0 3.8rem;
+    }
+
+    .product-stage {
+        min-height: 520px;
+    }
+
+    .product-card {
+        position: relative;
+        inset: auto;
+        margin: 18px;
+        width: auto;
+    }
+
+    .float-a, .float-b, .float-c {
+        display: none;
+    }
+
+    .trust-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .price-mini {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 980px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .features-visual {
+        position: relative;
+        top: auto;
+    }
+}
+
+@media (max-width: 980px) {
+    .specs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .performance-block {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 980px) {
+    .comparison-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 980px) {
+    .gallery-stage {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .gallery-panel {
+        order: -1;
+    }
+
+    .hotspot {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .usage-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .usage-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 980px) {
+    .price-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}

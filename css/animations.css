@@ -1,0 +1,23 @@
+.fade-up {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-up {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .scroll-dot {
+        animation: none;
+    }
+}
